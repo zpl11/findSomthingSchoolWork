@@ -39,26 +39,26 @@
 </template>
 
 <script>
-    export default {
-        name: 'schoolHeader',
+export default {
+    'name': 'schoolHeader',
 
-        data() {
-            return {
-                activeIndex: '1',
-            };
+    data() {
+        return {
+            'activeIndex': '1'
+        };
+    },
+    'methods': {
+        // 切换下面的主体部分
+        handleSelect(key, keyPath) {
+            console.log(key, keyPath);
+            this.$store.state.contentIndex = key;
         },
-        methods: {
-            // 切换下面的主体部分
-            handleSelect(key, keyPath) {
-                console.log(key, keyPath);
-                this.$store.state.contentIndex = key;
-            },
-            // 个人登录选项
-            userSelect(key, keyPath) {
-                console.log(key, keyPath);
-            }
+        // 个人登录选项
+        userSelect(key, keyPath) {
+            console.log(key, keyPath);
         }
-    };
+    }
+};
 </script>
 
 <style lang="scss">
