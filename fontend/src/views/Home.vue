@@ -10,7 +10,9 @@
                 <mainContent_03 v-if="countIndex == 3"></mainContent_03>
                 <mainContent_04 v-if="countIndex == 4"></mainContent_04>
             </el-main>
-            <el-footer class="foot-background">Footer</el-footer>
+            <el-footer class="foot-background">
+                <school-footer></school-footer>
+            </el-footer>
         </el-container>
 
     </div>
@@ -22,6 +24,7 @@ import mainContent from '../components/mainContent';
 import mainContent_02 from '../components/mainContent_02';
 import mainContent_03 from '../components/mainContent_03';
 import mainContent_04 from '../components/mainContent_04';
+import schoolFooter from "../components/schoolFooter";
 export default {
     'name': 'Home',
 
@@ -30,7 +33,8 @@ export default {
         mainContent,
         mainContent_02,
         mainContent_03,
-        mainContent_04
+        mainContent_04,
+        schoolFooter
     },
 
     'computed': {
@@ -63,17 +67,18 @@ export default {
         color: #2b2b2b;
 
         .header-background {
-            height: 10vh;
+            height: 10vh !important;
             background: #2c3e50;
         }
 
         .main-background {
-            height: 80vh;
+            height: 85vh;
             background: #bbd8ff;
         }
 
         .foot-background {
-            height: 10vh;
+            height: 5vh !important;
+            background: #2c3e50;
         }
     }
 </style>
