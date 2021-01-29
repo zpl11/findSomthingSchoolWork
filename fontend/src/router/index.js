@@ -13,7 +13,9 @@ const routes = [
     {
         'path': '/login',
         'name': 'Login',
-        'component': import('../views/login')
+        'component': function () {
+            return import(/* webpackChunkName: "about" */ '../views/login.vue');
+        },
     }
     // {
     //   path: '/about',
